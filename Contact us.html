@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Kyoto City</title>
+		<link rel="stylesheet" href="styles.css" />
+		<script src="script.js" defer></script>
+		<script
+			src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
+			async
+			defer></script>
+
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+	</head>
+
+	<body>
+		<header class="sticky-header">
+			<div class="container">
+				<h2>
+					<a href="#" class="logo"><sup>KYOTO</sup> CITY</a>
+				</h2>
+				<nav>
+					<ul class="menu">
+						<li><a href="index.html">HOME</a></li>
+						<li><a href="about.html">ABOUT</a></li>
+						<li><a href="landmarks.html">LANDMARKS</a></li>
+						<li><a href="transport.html">TRANSPORTS</a></li>
+						<li><a href="video.html">VIDEOS</a></li>
+						<li><a href="image.html">IMAGES</a></li>
+						<li><a href="Contact us.html">TEAM</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<section class="testimonial-section">
+			<h2>Team</h2>
+			<div class="testimonial-container">
+				<div class="testimonial-item">
+					<img src="IMG/Male.jpeg" alt="Testimonial 1" />
+					<h3>Ranhamila Gedara Thilina Jeevan Buddika Piyarathna</h3>
+					<p>m23w0112</p>
+				</div>
+
+				<div class="testimonial-item">
+					<img src="IMG/Male.jpeg" alt="Testimonial 2" />
+					<h3>Shrestha Anil</h3>
+					<p>M22W7307</p>
+				</div>
+
+				<div class="testimonial-item">
+					<img src="IMG/Male.jpeg" alt="Testimonial 2" />
+					<h3>Amarathunga Arachchige Suranga Pradeep Kumara</h3>
+					<p>m22w7485</p>
+				</div>
+
+				<div class="testimonial-item">
+					<img src="IMG/Female.jpeg" alt="Testimonial 2" />
+					<h3>Gurung Sharmila</h3>
+					<p>m22w7558</p>
+				</div>
+
+				<div class="testimonial-item">
+					<img src="IMG/Male.jpeg" alt="Testimonial 2" />
+					<h3>Islam Md. Tariqul</h3>
+					<p>m22w7337</p>
+				</div>
+
+				<div class="testimonial-item">
+					<img src="IMG/Female.jpeg" alt="Testimonial 2" />
+					<h3>KC Bhumika</h3>
+					<p>m22w7370</p>
+				</div>
+				<div class="testimonial-item">
+					<img src="IMG/Male.jpeg" alt="Testimonial 2" />
+					<h3>Paneru Chandra Kant</h3>
+					<p>m22w7480</p>
+				</div>
+				<div class="testimonial-item">
+					<img src="IMG/Female.jpeg" alt="Testimonial 2" />
+					<h3>Wijesinghe Vindya Sharmini</h3>
+					<p>m23w0128</p>
+				</div>
+				<!-- Add more testimonial items as needed -->
+			</div>
+		</section>
+
+		<footer>
+			<div class="footer-container">
+				<div class="left-section">
+					<h3>About Us</h3>
+					<p>
+						Our goal is to create a website that will provide a comprehensive
+						range of resources and services to help international students with
+						the transition to life in a new country.
+					</p>
+				</div>
+				<div class="middle-section">
+					<h3>Contact Info</h3>
+					<ul>
+						<li><i class="fa fa-phone"></i> Phone: 123-456-7890</li>
+						<li><i class="fa fa-envelope"></i> Email: example@example.com</li>
+						<li>
+							<i class="fa fa-map-marker"></i> Address: 123 Street, City,
+							Country
+						</li>
+					</ul>
+				</div>
+				<div class="right-section">
+					<h3>Helpful Links</h3>
+					<ul>
+						<li>
+							<a
+								href="https://www-city-kyoto-lg-jp.j-server.com/LUCKYOTOC/ns/tl.cgi/https://www.city.kyoto.lg.jp/index.html?SLANG=ja&TLANG=en&XMODE=0&XPARAM=q,&XCHARSET=utf-8&XPORG=,&XJSID=0"
+								>Kyoto City Official Site</a
+							>
+						</li>
+						<li>
+							<a
+								href="https://www.discoverkyoto.com/visitors-guide/kyoto-taxis/"
+								>Discover Kyoto</a
+							>
+						</li>
+						<li>
+							<a href="https://www.westjr.co.jp/global/en/timetable/"
+								>JR West</a
+							>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="copyright">
+				<hr />
+				<p>&copy; 2023 Kyoto City. All rights reserved By Group 21.</p>
+			</div>
+		</footer>
+	</body>
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			const headings = document.querySelectorAll("h2[id^='ticket-heading']");
+
+			headings.forEach(function (heading) {
+				heading.addEventListener("click", function () {
+					const stepsContainer = this.nextElementSibling;
+					const stepsInSection = stepsContainer.querySelectorAll(".step");
+
+					stepsInSection.forEach(function (step) {
+						step.style.display =
+							step.style.display === "none" ? "flex" : "none";
+					});
+				});
+			});
+		});
+	</script>
+</html>
