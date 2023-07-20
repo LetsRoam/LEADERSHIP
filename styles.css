@@ -1,0 +1,956 @@
+/* Reset default styles */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+	color: white;
+	background-color: #121212;
+}
+
+/*----- HEADER SECTION START -----*/
+.sticky-header {
+	position: sticky;
+	top: 0;
+	z-index: 9;
+	background: #121212;
+	background: rgba(0, 0, 0, 0.75);
+	height: 60px;
+}
+
+.sticky-header .container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 7.5px;
+}
+
+.sticky-header .logo {
+	font-size: 35px;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 750;
+	font-weight: bolder;
+	margin: 10px;
+	letter-spacing: -2px;
+	background-color: transparent;
+	color: orange;
+}
+
+.menu {
+	display: flex;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.menu li {
+	margin-left: auto;
+}
+
+.menu li a {
+	text-decoration: none;
+	color: whitesmoke;
+	font-weight: bolder;
+	text-transform: uppercase;
+	font-size: 15px;
+	padding: 5px 10px;
+	border-radius: 5px;
+	transition-duration: 0.75s;
+}
+
+.menu li a:hover {
+	background-color: orange;
+	transform: scale(1.1);
+}
+
+.menu li a:hover,
+.menu li a:focus {
+	transform: scale(1.1);
+	font-size: 20px;
+}
+
+/* Change color based on background color */
+.sticky-header.dark .logo,
+.sticky-header.dark .menu li a {
+	color: #000;
+}
+
+.sticky-header.light .logo,
+.sticky-header.light .menu li a {
+	color: #fff;
+}
+
+/*----- HEADER SECTION END -----*/
+
+/*----- HERO SECTION START -----*/
+.hero {
+	height: 102vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-size: cover;
+	background-position: center;
+	margin-top: -80px; /* Adjust the margin-top value to overlap the hero section with the sticky header */
+	z-index: -1; /* Move the hero section behind the header */
+}
+
+.hero-content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	color: #ffffff;
+}
+
+.hero-content h1 {
+	font-size: 48px;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+	overflow: hidden; /* Hide the overflow of the text */
+	white-space: nowrap; /* Prevent line breaks */
+	letter-spacing: 4px; /* Adjust letter spacing for the typewriter effect */
+}
+
+.hero-content h1::after {
+	content: "|"; /* Display a cursor after the text */
+	animation: cursorBlink 0.7s infinite; /* Add blinking animation to the cursor */
+}
+
+@keyframes cursorBlink {
+	0%,
+	100% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+}
+
+.hero-content p {
+	font-size: 20px;
+	margin-bottom: 30px;
+}
+
+.btn {
+	display: inline-block;
+	padding: 12px 24px;
+	background-color: orange;
+	color: #fff;
+	text-decoration: none;
+	border-radius: 4px;
+	transition: background-color 0.3s;
+}
+
+.btn:hover {
+	background-color: #ff8500;
+}
+/*----- HERO SECTION END -----*/
+
+/*----- ABOUT ME SECTION START -----*/
+.about-section {
+	height: 70vh;
+	overflow: hidden;
+}
+
+.about-content {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 20px;
+}
+
+.about-image img {
+	max-width: 700px;
+	height: 65vh;
+	border-radius: 10px;
+}
+
+.about-text {
+	width: 60%;
+	height: 65vh;
+	padding-left: 20px;
+	padding-right: 50px;
+	position: relative;
+}
+
+.about-text h2 {
+	color: orange;
+	text-align: center;
+	align-content: center;
+	text-transform: uppercase;
+	font-size: 36px;
+	margin: 10px 30px;
+	cursor: pointer;
+	transition: color 0.3s ease-in-out;
+	padding: 5px 125px;
+	background-color: peru;
+	text-decoration: none;
+	border-radius: 2px;
+}
+.about-text h2:hover {
+	color: orangered;
+}
+.about-text p {
+	font-size: 16px;
+	padding: 0px 50px;
+	margin-left: 30px;
+	border-radius: 2px;
+	width: 90%;
+	max-height: 400px; /* Added max-height */
+	overflow-y: auto;
+}
+/*----- ABOUT SECTION END -----*/
+
+/* image container section */
+.landmarks {
+	margin: auto;
+}
+
+.lcontainer {
+	box-sizing: border-box;
+	width: 95%;
+	margin-left: 2%;
+	align-items: center;
+	justify-content: center;
+	box-decoration-break: slice;
+	margin-top: 0px;
+}
+
+.landmarks h1 {
+	color: orange;
+	text-align: center;
+	align-content: center;
+	text-transform: uppercase;
+	font-size: 36px;
+	margin: 10px 30px;
+	position: relative;
+	cursor: pointer;
+	transition: color 0.3s ease-in-out;
+	padding: 5px 125px;
+	background-color: peru;
+	text-decoration: none;
+	border-radius: 2px;
+}
+
+.landmarks h1:hover {
+	color: orangered;
+}
+
+.lcontainer-inside {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.lcard {
+	width: 410px;
+	height: 250px;
+	background-color: #e6e6e6;
+	border-radius: 10px;
+	display: inline-block;
+	margin: 10px;
+	text-align: center;
+	overflow: hidden;
+	transition: all 0.3s ease-in-out;
+}
+.lcard:hover {
+	transform: scale(1.2);
+}
+
+.lcard img {
+	width: 100%;
+	height: 250px;
+	border-radius: 10px 10px 0 0;
+	image-resolution: auto;
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.6);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	transition: opacity 0.3s ease-in-out;
+}
+
+.lcard:hover .overlay {
+	opacity: 1;
+}
+
+.overlay h3 a {
+	color: white;
+	font-size: 16px;
+	margin: 0;
+}
+
+/* image container section end */
+
+.transports {
+	margin: auto;
+}
+
+.tcontainer {
+	box-sizing: border-box;
+	width: 95%;
+	margin-left: 2%;
+	align-items: center;
+	justify-content: center;
+	box-decoration-break: slice;
+	margin-top: 0px;
+}
+
+.tcontainer h1 {
+	color: orange;
+	text-align: center;
+	align-content: center;
+	text-transform: uppercase;
+	font-size: 36px;
+	margin: 5px 30px;
+	position: relative;
+	cursor: pointer;
+	transition: color 0.3s ease-in-out;
+	padding: 5px 125px;
+	background-color: peru;
+	text-decoration: none;
+	border-radius: 2px;
+}
+
+.tcontainer h1:hover {
+	color: orangered;
+}
+
+.tcontainer-inside {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.tcard {
+	width: 410px;
+	height: 250px;
+	background-color: #121212;
+	border-radius: 10px;
+	display: inline-block;
+	margin: 10px;
+	text-align: center;
+	overflow: hidden;
+	transition: all 0.3s ease-in-out;
+}
+.tcard:hover {
+	transform: scale(1.2);
+}
+
+.tcard img {
+	width: 100%;
+	height: 250px;
+	border-radius: 10px 10px 0 0;
+	image-resolution: 1080;
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.6);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	transition: opacity 0.3s ease-in-out;
+}
+
+.tcard:hover .overlay {
+	opacity: 1;
+}
+
+.overlay h3 {
+	color: white;
+	font-size: 16px;
+	margin: 0;
+}
+
+.maps {
+	margin: auto;
+}
+
+.map-container {
+	box-sizing: border-box;
+	width: 95%;
+	margin-left: 2%;
+	align-items: center;
+	justify-content: center;
+	box-decoration-break: slice;
+	margin-top: 0px;
+}
+
+.map-container h1 {
+	color: orange;
+	text-align: center;
+	align-content: center;
+	text-transform: uppercase;
+	font-size: 36px;
+	margin: 5px 30px;
+	position: relative;
+	cursor: pointer;
+	transition: color 0.3s ease-in-out;
+	padding: 5px 125px;
+	background-color: peru;
+	text-decoration: none;
+	border-radius: 2px;
+}
+
+.map-container h1:hover {
+	color: orangered;
+}
+
+.map-container iframe {
+	width: 100%;
+	margin: 10px 0px;
+	height: 500px;
+	border-radius: 10px;
+}
+
+/* video container section end */
+
+.video-container {
+	box-sizing: border-box;
+	width: 95%;
+	margin-left: 2%;
+	align-items: center;
+	justify-content: center;
+	box-decoration-break: slice;
+	margin-top: 0px;
+}
+.video-container h1 {
+	color: orange;
+	text-align: center;
+	align-content: center;
+	text-transform: uppercase;
+	font-size: 36px;
+	margin: 10px 30px;
+	position: relative;
+	cursor: pointer;
+	transition: color 0.3s ease-in-out;
+	padding: 5px 125px;
+	background-color: peru;
+	text-decoration: none;
+	border-radius: 2px;
+}
+
+.video-container h1:hover {
+	color: orangered;
+}
+
+.video {
+	width: 100%;
+	height: 750px;
+	border: 2px solid #191919;
+	border-radius: 15px;
+}
+/* video container section end */
+
+.ticket-section {
+	text-align: center;
+	width: 90%;
+	margin-left: 5%;
+	background-color: transparent;
+	margin-bottom: 10px;
+}
+.ticket-section h2 {
+	color: orange;
+	text-align: center;
+	align-content: center;
+	text-transform: uppercase;
+	font-size: 36px;
+	margin: 10px 30px;
+	position: relative;
+	cursor: pointer;
+	transition: color 0.3s ease-in-out;
+	padding: 5px 125px;
+	background-color: peru;
+	text-decoration: none;
+	border-radius: 2px;
+}
+
+.ticket-section h2:hover {
+	color: orangered;
+}
+/* Add styles for the .step class */
+.step {
+	display: flex;
+	align-items: center;
+	background: linear-gradient(black, #333);
+	border-radius: 5px;
+	padding: 10px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+/* CSS */
+
+.step-image {
+	flex: 0 0 40%;
+}
+
+.step-image img {
+	display: block;
+	width: 100%;
+	height: 350px;
+	border-radius: 15px 0px;
+}
+
+.step-instruction {
+	flex: 0 0 60%;
+	text-align: left;
+	padding-left: 50px;
+}
+
+.step-instruction p {
+	font-weight: bold;
+}
+
+/* Adjust layout for the image section */
+.images-section {
+	text-align: center;
+	width: 90%;
+	margin-left: 5%;
+}
+
+/* Style for the image heading */
+.images-heading {
+	color: orange;
+	text-align: center;
+	align-content: center;
+	text-transform: uppercase;
+	font-size: 36px;
+	margin: 0 30px;
+	position: relative;
+	cursor: pointer;
+	transition: color 0.3s ease-in-out;
+	padding: 5px 125px;
+	background-color: peru;
+	text-decoration: none;
+	border-radius: 2px;
+}
+
+.images-heading:hover {
+	color: orangered;
+}
+
+/* Style for the image container */
+.images-container {
+	width: 85%;
+	margin: 0 auto;
+	box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.images-container img {
+	display: block;
+	width: 100%;
+	height: 700px;
+	border-radius: 10px;
+}
+
+/* Add some spacing for the image section */
+.images-section {
+	margin-bottom: 10px;
+}
+
+/* Adjust layout for the train section */
+.pdf-section {
+	text-align: center;
+	width: 90%;
+	margin-left: 5%;
+	margin-bottom: 10px;
+}
+
+.pdf-container {
+	margin: 0 auto;
+	overflow: auto;
+	width: 90%;
+	box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+	text-align: center;
+}
+
+/* Style for train overview heading */
+.pdf-overview-heading {
+	color: orange;
+	text-align: center;
+	align-content: center;
+	text-transform: uppercase;
+	font-size: 36px;
+	position: relative;
+	cursor: pointer;
+	transition: color 0.3s ease-in-out;
+	padding: 5px 125px;
+	background-color: peru;
+	text-decoration: none;
+	border-radius: 2px;
+}
+.pdf-overview-heading:hover {
+	color: orangered;
+}
+
+/* Style for train overview paragraph */
+.pdf-overview-paragraph {
+	font-size: 18px;
+	color: white;
+	margin-bottom: 10px;
+	margin: 10px auto;
+	width: 75%;
+	text-align: center;
+	align-content: center;
+	position: relative;
+	justify-content: space-between;
+}
+
+.pdf-container iframe {
+	width: 90%;
+	height: 750px;
+	border: none;
+	border-radius: 10px;
+}
+
+/*----- CONTACT SECTION START -----*/
+.contact {
+	padding: 120px 0 80px;
+	background-color: black;
+	align-items: center;
+}
+
+.contact .container {
+	align-items: center;
+	width: 900px;
+	height: 70vh;
+	padding: auto;
+	margin: auto;
+	margin-bottom: 10px;
+}
+.contact-title {
+	text-align: center;
+	margin-bottom: 10px;
+	margin-top: -100px;
+}
+
+.contact .heading h2 {
+	font-size: 30px;
+	font-weight: 700;
+	margin-bottom: 0;
+	padding: 0;
+	color: white;
+}
+
+.contact .heading p {
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 1.7;
+	color: #999999;
+	margin: 20px 0 20px;
+	padding: 0;
+}
+
+.contact .form-control {
+	padding: 25px;
+	font-size: 13px;
+	margin-bottom: 10px;
+	background: #f9f9f9;
+	border: 0;
+	border-radius: 10px;
+	align-items: vertical;
+}
+
+.contact button.btn {
+	padding: 10px;
+	border-radius: 10px;
+	font-size: 15px;
+	background: #ff9100;
+	color: #ffffff;
+}
+
+.contact .title h3 {
+	font-size: 18px;
+	font-weight: 600;
+	text-align: center;
+}
+
+.contact .title p {
+	font-size: 14px;
+	font-weight: 400;
+	color: #999;
+	line-height: 1.6;
+	margin: 0 0 40px;
+	text-align: center;
+}
+
+.contact .content .info {
+	margin-top: 30px;
+}
+
+.contact .content .info i {
+	font-size: 30px;
+	padding: 0;
+	margin: 0;
+	color: #02434b;
+	margin-right: 20px;
+	text-align: center;
+	width: 20px;
+}
+
+.contact .content .info h4 {
+	font-size: 13px;
+	line-height: 1.4;
+}
+
+.contact .content .info h4 span {
+	font-size: 13px;
+	font-weight: 300;
+	color: #999999;
+}
+
+.contact .row {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: vertical;
+	justify-content: center;
+	text-align: center;
+}
+
+.contact .col-md-5,
+.contact .col-md-7 {
+	flex: 0 0 50%;
+	max-width: 50%;
+}
+.contact .col-sm-6,
+.contact .col-sm-12 {
+	width: 75%;
+	max-width: 400px;
+	margin-bottom: 10px;
+	height: 50px;
+}
+
+.contact .title h3 {
+	font-size: 24px;
+	font-weight: 700;
+	margin-bottom: 20px;
+}
+
+.contact .title p {
+	font-size: 18px;
+	color: #666;
+	margin-bottom: 30px;
+}
+
+.contact .info {
+	margin-bottom: 20px;
+}
+
+.contact .info i {
+	font-size: 24px;
+	margin-right: 10px;
+	color: #666;
+}
+
+.contact .info h4 {
+	font-size: 20px;
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+.contact .social-links {
+	margin-top: 20px;
+	text-align: center;
+}
+
+.contact .social-link {
+	display: inline-block;
+	margin: 0 5px;
+	font-size: 20px;
+	color: #02434b;
+}
+
+.contact .social-link:hover {
+	color: #ff9100;
+}
+
+.contact .info span {
+	font-size: 18px;
+	color: #666;
+}
+
+.contact form .form-control {
+	height: 50px;
+	font-size: 16px;
+	margin-bottom: 20px;
+	align-items: vertical;
+	width: 100%;
+}
+
+.contact form textarea.form-control {
+	height: 150px;
+	width: 85%;
+}
+
+.contact form .btn {
+	background-color: orange;
+	color: #fff;
+	font-size: 18px;
+	font-weight: 600;
+	padding: 12px 40px;
+	border-radius: 50px;
+	transition: all 0.3s ease;
+}
+
+.contact form .btn:hover {
+	background-color: #ff8500;
+}
+
+/*----- HERO SECTION END -----*/
+
+/* Footer Styles */
+footer {
+	background-color: #333333;
+	padding: 20px 0;
+	align-items: center;
+}
+
+.footer-container {
+	display: flex;
+	justify-content: space-between;
+	max-width: 1200px;
+	margin: 0 auto;
+	align-items: center;
+}
+
+.left-section,
+.middle-section,
+.right-section {
+	width: 33%;
+	align-items: center;
+}
+
+.left-section h3,
+.middle-section h3,
+.right-section h3 {
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+
+.left-section p,
+.middle-section p,
+.right-section ul {
+	font-size: 14px;
+	line-height: 1.5;
+	width: 90%;
+}
+
+.right-section ul {
+	padding: 0;
+	margin: 0;
+}
+
+.right-section li {
+	list-style: none;
+	margin-bottom: 5px;
+}
+
+.right-section a {
+	color: white;
+	text-decoration: none;
+}
+
+.right-section a:hover {
+	text-decoration: underline;
+}
+
+hr {
+	border: none;
+	border-top: 1px solid orange;
+	margin: 20px 0;
+}
+
+p {
+	margin: 0;
+}
+.middle-section ul {
+	list-style-type: none; /* Add this line to display the dots */
+	padding: 0;
+	margin: 0;
+}
+
+.middle-section li {
+	margin-bottom: 5px;
+}
+.copyright {
+	text-align: center;
+}
+
+.testimonial-section {
+	color: white;
+	margin-left: 2.5%;
+	margin: 10px;
+	text-align: center;
+	width: 95%;
+}
+.testimonial-section h2 {
+	color: orange;
+	text-align: center;
+	align-content: center;
+	text-transform: uppercase;
+	font-size: 36px;
+	margin: 10px 30px;
+	position: relative;
+	cursor: pointer;
+	transition: color 0.3s ease-in-out;
+	padding: 5px 125px;
+	background-color: peru;
+	text-decoration: none;
+	border-radius: 2px;
+}
+.testimonial-section h2:hover {
+	color: orangered;
+}
+
+.testimonial-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 75px;
+	margin-top: 20px;
+}
+
+.testimonial-item {
+	width: 300px;
+}
+
+.testimonial-item img {
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	object-fit: cover;
+	margin-bottom: 20px;
+}
+
+.testimonial-item h3 {
+	font-size: 18px;
+}
+
+.testimonial-item p {
+	font-size: 16px;
+	text-transform: uppercase;
+	font-style: italic;
+}
